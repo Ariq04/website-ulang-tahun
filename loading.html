@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: #00ff00;
+        font-family: "Press Start 2P", monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .loading-box {
+        border: 2px solid #00ff00;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 0 20px #00ff00;
+      }
+
+      .title {
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      .status {
+        margin-bottom: 10px;
+      }
+
+      .progress-container {
+        background: #222;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 20px;
+        margin-bottom: 10px;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(to right, #00ff00, #00cc00);
+        text-align: center;
+        color: black;
+        font-size: 10px;
+      }
+
+      .smile {
+        color: orange;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-box">
+      <div class="title">HAPPY BIRTHDAY</div>
+      <div class="status">> PREPARING BIRTHDAY SURPRISE...</div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar">0%</div>
+      </div>
+      <div class="smile" id="smileText"></div>
+    </div>
+
+    <script>
+      let progress = 0;
+      const bar = document.getElementById("progressBar");
+      const smileText = document.getElementById("smileText");
+
+      const interval = setInterval(() => {
+        progress += 1;
+        bar.style.width = progress + "%";
+        bar.textContent = progress + "%";
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          smileText.textContent = "SMILE!";
+          setTimeout(() => {
+            window.location.href = "index.html"; // Ganti dengan halaman tujuan
+          }, 2000);
+        }
+      }, 50); // 100% dalam 5 detik
+    </script>
+  </body>
+</html>

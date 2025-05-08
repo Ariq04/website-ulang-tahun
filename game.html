@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tetris-panel">
+        <div class="header">
+          <h1 class="title">Tetris</h1>
+          <div class="info">
+            <span>Score: <span id="score">0</span></span>
+            <span>Level: <span id="level">1</span></span
+            ><br />
+            <span>Lines: <span id="lines">0</span></span>
+          </div>
+        </div>
+        <canvas id="tetris" width="200" height="400"></canvas>
+        <div id="gameOverMsg" class="game-over-overlay" style="display: none">
+          <h2 class="game-over-text">GAME OVER</h2>
+          <button onclick="confirmGameOver()">CONFIRM</button>
+        </div>
+        <div id="lovePopup" class="popup" style="display: none">
+          <div class="popup-content">
+            <h2 style="color: yellow">INGET YA!</h2>
+            <p style="color: lightgreen">
+              walaupun kamu kalah,<br />
+              tapi kamu selalu menang kok di hati aku, HEHE ^_^
+            </p>
+            <h3 style="color: pink">I LOVE YOU &lt;3</h3>
+            <button id="okButton" onclick="closeLovePopup()">
+              LOVE YOU TOO
+            </button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button onclick="moveLeft()">&#x25C0;</button>
+          <button onclick="rotate()">ROTATE</button>
+          <button onclick="moveRight()">&#x25B6;</button>
+        </div>
+        <button class="back-button" onclick="window.location.href='index.html'">
+          KEMBALI
+        </button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

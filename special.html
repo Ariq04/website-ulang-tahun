@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Spesial</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="gameboy">
+      <div class="screen">
+        <h1>Video<br />Spesial</h1>
+        <video id="specialVideo" controls>
+          <source src="vidio1.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="menu">
+        <a href="index.html" class="button green">BACK</a>
+        <button class="button red" onclick="nextVideo()">NEXT VIDEO</button>
+      </div>
+
+      <div class="controls">
+        <div class="dpad">
+          <div class="up"></div>
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="right"></div>
+          <div class="down"></div>
+        </div>
+        <div class="ab-buttons">
+          <div class="button-a">A</div>
+          <div class="button-b">B</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const videos = [
+        "video4.mp4",
+        "vidio1.mp4",
+        "vidio2.mp4",
+        "vidio5.mp4",
+        "vidio6.mp4",
+        "vidio7.mp4",
+        "vidio3.mp4",
+      ];
+      let current = 0;
+      function nextVideo() {
+        current = (current + 1) % videos.length;
+        const video = document.getElementById("specialVideo");
+        video.src = videos[current];
+        video.play();
+      }
+    </script>
+  </body>
+</html>

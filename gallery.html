@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - PhotoBox</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gameboy">
+      <div class="screen gallery-screen">
+        <h2 class="gallery-title">Gallery</h2>
+
+        <div class="photobox-header">
+          <div class="indicator">
+            <span class="dot red"></span>
+            <span>ARIQ PHOTOBOX</span>
+            <span class="dot green"></span>
+          </div>
+        </div>
+
+        <div class="photobox-body" id="photoboxBody">
+          <p>Photobox siap digunakan</p>
+          <button class="btn-print" onclick="startPrinting()">
+            MULAI CETAK
+          </button>
+        </div>
+
+        <div class="navigation-buttons">
+          <a href="special.html" class="btn-next">SELANJUTNYA</a>
+          <a href="message.html" class="btn-back">KEMBALI</a>
+        </div>
+      </div>
+    </div>
+    <audio id="backgroundMusic">
+      <source src="Ed Sheeran - Photograph.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>
