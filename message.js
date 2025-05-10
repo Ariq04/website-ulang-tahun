@@ -13,6 +13,7 @@ const messageText = [
   "Pokoknyo kalau samo aku kau dak perlu lagi jadi cewe yang superr duper stroong cukup diluaran bae terlihat strongnyo sisahny biso diluapkan ke akuu yo sayang.",
   "Mungkin aku dak pintar ngerangkai kata kata yang bagus atau menyentuh tapi yang harus kau tau aku sesayang itu samo kau ❤️❤️",
   "Maaf yo aku belum biso ngerayain langsung atau ngucapin langsung nyusul kau ke sano 😔 dan Maaf jugo yo aku sering ketiduran.",
+  "Jika Kehidupan Adalah Buku, Maka Bertemu Denganmu Adalah Bab Favoritku.",
   "Semoga kau suko dengan kado online yang aku buat.",
   "Love you ❤️❤️",
 ];
